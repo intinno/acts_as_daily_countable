@@ -1,0 +1,1 @@
+require 'daily_countable'
