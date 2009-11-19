@@ -9,6 +9,18 @@ Features
 2. For a particular record of a model, stores the periods during which it was active.
 
 
+Installation
+------------
+
+Write the following like in your rails root to install
+
+	./script/plugin install git://github.com/intinno/acts_as_daily_countable.git
+
+Copy the files ftom the migrations folder to your RAILS_ROOT/db/migrate and run
+
+	db:migrate
+
+
 Usage
 -----
 
@@ -37,7 +49,7 @@ To find the ids of records that were active on a particular day, use
 
 To find the activity periods of a certain record
 	
-	Record.activity_periods like User.first.activity_periods
+	Record.active_periods like User.first.active_periods
 
 This will return the array of time when the user was active. For example [[StartDateObject, EndDateObject]]
 
