@@ -34,8 +34,13 @@ For Example
 		acts_as_daily_countable
 	end
 
-Run the task daily_countable:persist_counts to save the count details. 
+
+To count and store the number or records, run the following rake task
+
+	daily_countable:persist_counts
+
 It is recommended that this rake task should be run atleast once during the day.
+
 
 To find the count of reocrds that were active on a particular day, use
 	
