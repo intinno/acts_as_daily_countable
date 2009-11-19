@@ -23,5 +23,10 @@ class DailyCountable < ActiveRecord::Base
     entry = self.find(:last, :conditions =>  " model_name = '#{model_name}' ")
     entry.try(:ids).try(:split, ",") || []
   end
+
+  def self.model_entry_on(model_name, date)
+    DailyCountable.find(:last,
+      :conditions => "model_name = '#{model_name}' and counted_on = '#{date.db_date}'")
+  end
 end
 
